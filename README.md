@@ -1,14 +1,22 @@
-# smr-22-ps0
-Please modify the code in file ```prac_input.py```.
+This assignment is open to collaboration with your fellow students.
 
-Your task is to prompt the user to enter 2 numbers. The print out the first raised to the exponent of the second.
+As with all assignments there is no grading tracked. However, the instructors/TAs will review solutions to give guidance. 
 
-  Example Output: 
-  
-    Please enter the first number: 4
-    Please enter the second number: 3
-    4 raised to 3 is 64
-    
-There is a function called ```input()``` that takes user input and saves it. Please refer to https://www.w3schools.com/python/ref_func_input.asp to learn more about this function. 
+# PS1: Number Guessing Game
+The goal of this assignment is to recreate a number guessing game. The game will randomly select a number between 1 and 100. Then prompt the user to guess the number. The computer will then respond with `Too High`, `Too Low` or `You Win`. If the user has not won, they will be given another opportunity to guess.
 
-After you have completed the assignment please try to submit a pull request. As this is the first assignment using Git, do not worry if you are not able to submit your pull request. We will go over the answer and full procedure at next lecture.
+Please make your code changes only in `main.py`. You can test your code by clicking on the `Run` button.
+
+# RULES
+1. Use random number generator to choose a number between 1 and 100. Below is code for choosing the random number (note it is in starter code already).
+   ```Python
+   import random
+   answer = random.randint(1, 100)
+   ```
+2. Request `Player`'s guess. (Bonus: verify player guess is valid)
+3. Check the guess and respond with `Too High`, `Too Low` or `Win`.
+4. Repeat loop if player guessed wrong. Otherwise, exit with a congratulatory message.
+
+# TIPS
+- You need external loop to check if guess correct
+- Use proper logic to respond with `Too High`, `Too Low` or `Win`

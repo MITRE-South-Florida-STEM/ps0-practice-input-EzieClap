@@ -1,13 +1,43 @@
-# please use the code below to run your code
+'''
+  Starter Code for number guessing game
+  4/2/22
+  Please enter your team members names here:
+  Sheperad: Ryan 
+  Ezie: Frank
+  Kaibo-Asaph: Michael
 
-# replace the following line to prompt user for first number
-x = int(input(print("Please enter the first number: ")))
+Pseudo Code:
+-Generate random # and assign as answer
 
-# replace the following line to prompt user for second number
-y = int(input(print("Please enter the second number: ")))
+-Ask user for input
 
-# replace the following line to compute exponent
-ans = int(x ** y)
+-Use condition to compare input to random number "RN" our random number/answer
+  -If less than "RN", return         output "Too Low"
+  -If greater than "RN", return      output "Too High"
+  -repeat until /, then return      output "You Win"
+'''
 
-# replace the following line to print solution
-print(str(x) + ' raised to ' + str(y) + ' is ' + str(ans))
+#Begin your code here
+
+import random
+
+answer = random.randint(1, 100)
+
+# answer = 78
+
+x = int(input("Enter Guess: "))
+
+while x != answer:
+
+  if x > answer:
+    print("Too High")
+    x = int(input("Take Another Guess: "))
+
+  elif x < answer:
+    print("Too low")
+    x = int(input("Take Another Guess: "))
+    
+  else:
+    break
+    
+print("Correct!")
